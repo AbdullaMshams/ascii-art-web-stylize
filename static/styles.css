@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+    .pixelify-sans title {
+      font-family: "Pixelify Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+    body {
+      /* font-family: Arial, sans-serif; */
+      /* size: 1024px 768px ; */
+      padding: 50px;
+      /* min-height: 100vh; */
+    }
+    :root {
+      --color1: #fff;
+      --color2: #121212;
+      --img1:url(/assets/Bulb.png)
+    }
+    [data-theme="dark"] {
+      --color1: #272927;
+      --color2: #fff;
+      --img1:url(/assets/DarkBulb.png)
+    }
+
+
+    .title {
+      font-family: "Pixelify Sans";
+      text-align: center;
+      /* padding: 10px 0 0 0; */
+      font-size: 40px;
+      height: 157px;
+    }
+
+ 
+    
+    
+
+    
+
+    .cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    .switch{
+      width: 100%;
+      
+    }
+
+    #toggle{
+      background-image: var(--img1);
+      /* background-size: cover; */
+      
+      background-repeat: no-repeat;
+      width: 100px;
+      height: 100px;
+      color: var(--color2);
+      background-color: var(--color1);
+      border: 5px solid var(--color2);
+      border-radius: 2px;
+      box-shadow:    6px 6px 0px var(--color2);
+      cursor: pointer;
+    }
+    #toggle:hover {
+      background-color: var(--color1);
+      color: var(--color2);
+      font-weight: bold;
+      border: 3px solid var(--color2);
+      box-shadow: 4px 4px 0px var(--color2);
+    }
+
+    #toggle:active {
+      background-color: var(--color1);
+      box-shadow: none;
+      transform: translateY(4px);
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-family: "Pixelify Sans";
+      font-size:    25px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--color2);
+      background-color: var(--color1);
+      border: 5px solid var(--color2);
+      border-radius: 2px;
+      box-shadow:    6px 6px 0px var(--color2);
+      transition:    all 0.2s ease;
+      cursor:        pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--color1);
+      color: var(--color2);
+      font-weight: bold;
+      border: 3px solid var(--color2);
+      box-shadow: 4px 4px 0px var(--color2);
+    }
+
+    .btn:active {
+      background-color: var(--color1);
+      box-shadow: none;
+      transform: translateY(4px);
+    }
+
+    .button-group {
+      margin-top: 10px;
+    }
+
+    #submit {
+      position: relative;
+      font-size: 20px;
+      color: var(--color2);
+      border: 5px solid var(--color2);
+      border-radius: 2px;
+      background-color: var(--color1);
+      box-shadow: 11px 11px 0px 0px var(--color2);
+      padding: 15px 0 0;
+      margin-top: 50px;
+      width: 65%;
+      min-height: 250px;
+      /* height: 100%; */
+      /* white-space: pre; */
+      overflow: auto;
+      margin-bottom: 45px;
+    }
+    /* /////textarea box///// */
+    .form__group {
+      position: relative;
+      padding: 15px 0 0;
+      margin-top: 1px;
+      width: 100%;
+    }
+    .form__field {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid #9b9b9b;
+      outline: 0;
+      font-size: 1.3rem;
+      color: var(--color2);
+      padding: 7px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+      resize: vertical; /* Allows resizing of the textarea */
+      min-height: 0px; /* Initial height for textarea */
+      height: 45px;
+    }
+    .form__field::placeholder {
+      color: transparent;
+    }
+    .form__field:placeholder-shown~.form__label {
+      font-size: 1.5rem;
+      font-weight: 700;
+      cursor: text;
+      top: 30px;
+    }
+    .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-family: "Pixelify Sans";
+      color: var(--color2);
+    }
+    .form__field:focus {
+      padding-bottom: 6px;
+      font-weight: 700;
+      border-width: 3px;
+      border-image: linear-gradient(to right, var(--color2), var(--color2));
+      border-image-slice: 1;
+      
+    }
+    .form__field:focus~.form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: var(--color2);
+      font-weight: 700;
+    }
+    .form__field:required,
+    .form__field:invalid {
+      box-shadow: none;
+    }
+    /* /////////////////// */
+    body {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+      min-height: 90vh;
+      font-size: 1.5rem;
+      /* background-color: #121212; */
+      background: radial-gradient(circle, var(--color2) 10%, transparent 11%);
+      background-size: 1em 1em;
+      background-color: var(--color1);
+      opacity: 1;
+      color: var(--color2);
+    }
+
+img{
+      width: 50ch;
+      padding-top: 20%;
+    
+    }
+
+
+    @media (max-width : 800px) {
+      #submit{
+        width: 85%;
+      }
+      
+        
+        }
+      
+          @media (max-width: 666px) {
+            .title {
+                font-size: 30px;
+            }
+            .button-group {
+              display: flex;
+              flex-direction: column;
+            }
+      
+        
+        }
+        
+        @media (max-width: 526px) {
+            .title {
+                font-size: 25px;
+            }
+            .button-group {
+              display: flex;
+              flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 458px) {
+            .title {
+                font-size: 20px;
+            }
+            .button-group {
+              display: flex;
+              flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .title {
+                font-size: 18px; /* Adjust for very small screens */
+            }
+            .button-group {
+              display: flex;
+              flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 350px) {
+            .title {
+                font-size: 16px; /* Even smaller for small devices */
+            }
+            .button-group {
+              display: flex;
+              flex-direction: column;
+            }
+        }
+        
+    
