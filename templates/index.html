@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="{{ .Theme }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>ASCII ART</title>
+</head>
+
+<body data-theme="{{ .Theme }}">
+
+  <div class="switch">
+    <form action="/toggle-theme" method="POST">
+      <input type="hidden" name="theme"
+        value="{{ if eq .Theme "dark" }}light{{ else }}dark{{ end }}">
+      <button id="toggle" type="submit">
+
+      </button>
+    </form>
+  </div>
+
+  <div class="title">
+    <h1>ASCII ART WEB</h1>
+  </div>
+  <div class="cont">
+    <form id="myForm" action="/AsciiArt" method="POST">
+      <div class="form__group field">
+        <textarea class="form__field" placeholder="Enter your text" name="inputText" id="inputText" required></textarea>
+        <label for="inputText" class="form__label">ENTER YOUR TEXT</label>
+      </div>
+      <div class="button-group">
+        <button class="btn" type="submit" name="style" value="standard">Standard</button>
+        <button class="btn" type="submit" name="style" value="shadow">Shadow</button>
+        <button class="btn" type="submit" name="style" value="thinkertoy">Thinkertoy</button>
+      </div>
+    </form>
+  </div>
+  <div id="submit">
+    {{ if .Result }}
+    <pre id="res">{{ .Result }}</pre>
+    {{ end }}
+  </div>
+  <br><br>
+  <input type="button" id="btn2" class="btn"  value="Download" />
+  <script>
+    function download(file, text) {
+
+        let element = document.createElement('a');
+        element.setAttribute('href',
+            'data:text/plain;charset=utf-8, '
+            + encodeURIComponent(text));
+        element.setAttribute('download', file);
+        document.body.appendChild(element);
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
+    document.getElementById("btn2")
+        .addEventListener("click", function () {
+            let text =
+                document.getElementById("res").innerText;
+            let filename = "AsciiArt.txt";
+
+            download(filename, text);
+        }, false);
+</script>
+</body>
+
+</html>
