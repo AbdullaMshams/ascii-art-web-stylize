@@ -1,0 +1,44 @@
+:root {
+  --color1: #fff;
+  --color2: #121212;
+  --img1:url(/assets/Bulb.png)
+}
+[data-theme="dark"] {
+  --color1: #272927;
+  --color2: #fff;
+  --img1:url(/assets/DarkBulb.png)
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-size: 1.5rem;
+  background: radial-gradient(circle, #121212 10%, transparent 11%);
+  background-size: 1em 1em;
+  background-color: #fff;
+  opacity: 1;
+  color: #fff;
+}
+
+#error500 {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dino  {
+  width: 21%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: -1%;
+  height: 100%;
+  align-self: flex-start;
+}
